@@ -1,5 +1,5 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express');// create a webserver
+var morgan = require('morgan');// help output logs
 var path = require('path');
 
 var app = express();
@@ -15,6 +15,18 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+app.get('article-one',function(req,res){
+    res.send('Article one requested one will be served here');
+});
+
+app.get('article-two',function(req,res){
+    res.send('Article one requested one will be served here');
+});
+
+app.get('article-three',function(req,res){
+    res.send('Article one requested one will be served here');
 });
 
 
